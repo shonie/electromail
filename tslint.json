@@ -17,6 +17,8 @@
             }
         ],
         "variable-name": false,
+        "function-name": false,
+        "import-name": false,
         "jsx-alignment": true,
         "jsx-equals-spacing": [true, "never"],
         "jsx-no-string-ref": true,

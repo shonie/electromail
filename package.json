@@ -96,13 +96,17 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@hot-loader/react-dom": "^16.8.6",
+    "@types/classnames": "^2.2.9",
     "@types/electron-devtools-installer": "^2.2.0",
     "@types/jest": "^24.0.13",
+    "@types/lodash.groupby": "^4.6.6",
+    "@types/lodash.keyby": "^4.6.6",
     "@types/react": "^16.8.18",
     "@types/react-dom": "^16.8.4",
     "@types/react-hot-loader": "^4.1.0",
     "@types/react-redux": "^7.0.9",
     "@types/react-test-renderer": "^16.8.1",
+    "@types/redux-saga": "^0.10.5",
     "@types/webdriverio": "^4.8.7",
     "@types/webpack-env": "^1.13.3",
     "babel-loader": "^8.0.6",
@@ -139,9 +143,13 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash.keyby": "^4.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-create-reducer": "^2.0.0",
+    "redux-saga": "^1.1.1"
   }
 }
