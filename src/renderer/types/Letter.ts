@@ -29,3 +29,8 @@ export interface ArchivedLetter extends Letter {
 export interface SpamLetter extends Letter {
     category: 'SPAM';
 }
+
+export interface DeletedLetter extends Letter {
+    category: 'DELETED';
+    deleted: true;
+}

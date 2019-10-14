@@ -30,6 +30,11 @@ const folders: Folder[] = [
         title: 'Spam',
         category: categories.SPAM,
         icon: ''
+    },
+    {
+        title: 'Deleted',
+        category: categories.DELETED,
+        icon: ''
     }
 ];
 

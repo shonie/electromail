@@ -7,9 +7,15 @@ import * as theme from './Previews.scss';
 export default function Previews({ letters, onLetterSelect }: PreviewsProps) {
     return (
         <ul className={theme.previews}>
-            {letters.map((l: Letter) => (
-                <Preview letter={l} onSelect={onLetterSelect} key={l.id} />
-            ))}
+            {letters
+                .slice()
+                .sort(
+                    (a: Letter, b: Letter) =>
+                        new Date(a.date).getTime() - new Date(b.date).getTime()
+                )
+                .map((l: Letter) => (
+                    <Preview letter={l} onSelect={onLetterSelect} key={l.id} />
+                ))}
         </ul>
     );
 }

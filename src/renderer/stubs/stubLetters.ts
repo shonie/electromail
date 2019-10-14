@@ -3,11 +3,11 @@ import { Letter } from '../types';
 const stubLetters: Letter[] = [
     {
         id: '1',
-        from: 'Alice Jena',
+        from: 'Alice White',
         to: 'my@mail.com',
         date: '2019-10-14T06:46:23.162Z',
         subject: 'Hello from Alice',
-        content: '<div>Hello from Alice Jena!</div>',
+        content: '<div>Hello from Alice White!</div>',
         category: 'INBOX',
         isRead: true,
         deleted: false
