@@ -44,7 +44,11 @@ export const lettersReducer = createReducer<LettersState, LettersActions>(defaul
     }),
     [SET_CURRENT_LETTER]: (state: LettersState, action: SetCurrentLetterAction) => ({
         ...state,
-        current: action.payload
+        current: action.payload,
+        list: state.list.map((l: Letter) => (l.id === action.payload ? { ...l, isRead: true } : l)),
+        map: mapValues(state.map, (l: Letter) =>
+            l.id === action.payload ? { ...l, isRead: true } : l
+        )
     }),
     [CLEAR_MAILBOX]: (state: LettersState, _: ClearMailboxAction) => ({
         ...state,

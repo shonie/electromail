@@ -8,7 +8,7 @@ import * as readIcon from './icons/read.svg';
 import * as unreadIcon from './icons/unread.svg';
 
 export default function Letter({ letter, updateLetter, deleteLetter }: LetterProps) {
-    const ref: React.RefObject<HTMLDivElement> = React.useRef(null);
+    const ref: React.RefObject<HTMLParagraphElement> = React.useRef(null);
 
     React.useEffect(() => {
         if (ref && ref.current && letter) {
@@ -37,7 +37,7 @@ export default function Letter({ letter, updateLetter, deleteLetter }: LetterPro
                 <p>From: {letter.from}</p>
                 <p>To: {letter.to}</p>
                 <p>Date: {letter.date.slice(0, 19).replace('T', ' ')}</p>
-                <div className={theme.content} ref={ref} />
+                <p className={theme.content} ref={ref} />
             </div>
         )
     );

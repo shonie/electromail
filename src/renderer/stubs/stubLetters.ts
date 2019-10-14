@@ -9,7 +9,7 @@ const stubLetters: Letter[] = [
         subject: 'Hello from Alice',
         content: '<div>Hello from Alice White!</div>',
         category: 'INBOX',
-        isRead: true,
+        isRead: false,
         deleted: false
     },
     {
@@ -20,7 +20,7 @@ const stubLetters: Letter[] = [
         subject: 'Great news!',
         content: '<div>Hello from John Fuseki!</div>',
         category: 'INBOX',
-        isRead: true,
+        isRead: false,
         deleted: false
     },
     {
@@ -31,7 +31,7 @@ const stubLetters: Letter[] = [
         subject: 'Access request',
         content: '<div>Could you grant an access to me?</div>',
         category: 'INBOX',
-        isRead: true,
+        isRead: false,
         deleted: false
     },
     {
@@ -42,7 +42,7 @@ const stubLetters: Letter[] = [
         subject: 'Kimchi order',
         content: '<div>Waiting for your kimchi</div>',
         category: 'SENT',
-        isRead: true,
+        isRead: false,
         deleted: false
     },
     {
@@ -53,7 +53,7 @@ const stubLetters: Letter[] = [
         subject: 'Miss you',
         content: '<div>Miss you very much, my dear friend!</div>',
         category: 'SENT',
-        isRead: true,
+        isRead: false,
         deleted: false
     },
     {
@@ -64,7 +64,7 @@ const stubLetters: Letter[] = [
         subject: 'Payment accepted',
         content: '<div>Thank you for your payment, it has been succeeded!</div>',
         category: 'SENT',
-        isRead: true,
+        isRead: false,
         deleted: false
     },
     {
@@ -75,7 +75,7 @@ const stubLetters: Letter[] = [
         subject: 'Products based on your interests',
         content: '<div>Take a look at this fridge!</div>',
         category: 'ARCHIVED',
-        isRead: true,
+        isRead: false,
         deleted: false
     },
     {
@@ -86,7 +86,7 @@ const stubLetters: Letter[] = [
         subject: 'SALES SALES SALES',
         content: '<div>Greatest discounts ever in the greatest ever shop!!!</div>',
         category: 'SPAM',
-        isRead: true,
+        isRead: false,
         deleted: false
     },
     {
@@ -97,7 +97,18 @@ const stubLetters: Letter[] = [
         subject: 'Have you worn a cap?',
         content: '<div>Answer immediately!!!</div>',
         category: 'INBOX',
-        isRead: true,
+        isRead: false,
+        deleted: false
+    },
+    {
+        id: '10',
+        from: 'meaningless@gmail.com',
+        to: 'my@mail.com',
+        date: '2019-09-29T06:46:23.162Z',
+        subject: 'Very long meaningless letter',
+        content: `<div>${'<div>Very long content. </div>'.repeat(100)}</div>`,
+        category: 'INBOX',
+        isRead: false,
         deleted: false
     }
 ];
