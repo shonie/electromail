@@ -3,11 +3,11 @@ import * as theme from './Folders.scss';
 import { FolderProps } from './types';
 
 export function Folder({ folder, onSelect }: FolderProps) {
-    const handleClick = () => onSelect(folder);
+    const handleClick = () => onSelect(folder.category);
 
     return (
-        <div className={theme.folder} onClick={handleClick}>
+        <li className={theme.folder} onClick={handleClick}>
             {folder.title}
-        </div>
+        </li>
     );
 }

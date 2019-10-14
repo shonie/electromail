@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { Dispatch } from 'redux';
 import { RootState } from './../reducers/index';
 import Letter, { LetterProps } from '../components/Letter';
 
-const mapStateToProps = (state: RootState) => ({
-    letter: state.letters.list[state.letters.current]
+const mapStateToProps = ({ letters: { current, map } }: RootState) => ({
+    letter: map[current as string] || null
 });
 
 const Container: React.ComponentType<Partial<LetterProps>> = connect(mapStateToProps)(Letter);

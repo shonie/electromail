@@ -2,9 +2,9 @@ import { Folder } from '../../types';
 
 export interface FolderProps {
     folder: Folder;
-    onSelect: (folder: Folder) => void;
+    onSelect: (folder: string) => void;
 }
 
 export interface FoldersProps {
-    onFolderSelect: (folder: Folder) => void;
+    onFolderSelect: (folder: string) => void;
 }

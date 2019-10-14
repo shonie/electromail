@@ -1,14 +1,13 @@
 import { Action, ActionCreator } from 'redux';
-import { Folder } from '../types';
 
 export const FOLDER_SELECTED = 'FOLDER_SELECTED';
 
 export interface FolderSelectedAction extends Action {
     type: 'FOLDER_SELECTED';
-    payload: Folder;
+    payload: string;
 }
 
-export const folderSelected: ActionCreator<FolderSelectedAction> = (payload: Folder) => ({
+export const folderSelected: ActionCreator<FolderSelectedAction> = (payload: string) => ({
     payload,
     type: FOLDER_SELECTED
 });

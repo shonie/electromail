@@ -1,27 +1,26 @@
-.folders {
+.previews {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    flex: 0 0 300px;
     width: 100%;
     height: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 24px 0 0 0;
     margin: 0;
     background-color: whitesmoke;
+    list-style: none;
 }
 
-.folderList {
-    margin: 0;
-    padding: 36px 0 0 0;
-}
-
-.folder {
-    height: 36px;
-    padding: 0px 24px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 36px;
+.preview {
+    width: 100%;
+    flex: 0 0 100px;
+    padding: 4px 24px;
     transition: background-color 220ms ease-in-out;
 
     &:hover {
-        background-color: lightgray;
         cursor: pointer;
+        background-color: lightgray;
     }
 }

@@ -36,7 +36,6 @@ const folders: Folder[] = [
 export default function Folders({ onFolderSelect }: FoldersProps) {
     return (
         <div className={theme.folders}>
-            <div className={theme.title}>Folders</div>
             <ul className={theme.folderList}>
                 {folders.map((f: Folder) => (
                     <FolderComponent

@@ -5,7 +5,6 @@ export interface Letter {
     date: string;
     subject: string;
     content: string;
-    preview: string;
     isRead: boolean;
     deleted: boolean;
     category: string;

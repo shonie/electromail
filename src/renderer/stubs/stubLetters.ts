@@ -1,0 +1,105 @@
+import { Letter } from '../types';
+
+const stubLetters: Letter[] = [
+    {
+        id: '1',
+        from: 'Alice Jena',
+        to: 'my@mail.com',
+        date: '2019-10-14T06:46:23.162Z',
+        subject: 'Hello from Alice',
+        content: '<div>Hello from Alice Jena!</div>',
+        category: 'INBOX',
+        isRead: true,
+        deleted: false
+    },
+    {
+        id: '2',
+        from: 'John Fuseki',
+        to: 'my@mail.com',
+        date: '2019-10-12T06:46:23.162Z',
+        subject: 'Great news!',
+        content: '<div>Hello from John Fuseki!</div>',
+        category: 'INBOX',
+        isRead: true,
+        deleted: false
+    },
+    {
+        id: '3',
+        from: 'Danny Bowl',
+        to: 'my@mail.com',
+        date: '2019-10-13T06:46:23.162Z',
+        subject: 'Access request',
+        content: '<div>Could you grant an access to me?</div>',
+        category: 'INBOX',
+        isRead: true,
+        deleted: false
+    },
+    {
+        id: '4',
+        from: 'my@mail.com',
+        to: 'kimchi@gmail.com',
+        date: '2019-10-22T06:46:23.162Z',
+        subject: 'Kimchi order',
+        content: '<div>Waiting for your kimchi</div>',
+        category: 'SENT',
+        isRead: true,
+        deleted: false
+    },
+    {
+        id: '5',
+        from: 'my@mail.com',
+        to: 'fred_friend@gmail.com',
+        date: '2019-09-13T06:46:23.162Z',
+        subject: 'Miss you',
+        content: '<div>Miss you very much, my dear friend!</div>',
+        category: 'SENT',
+        isRead: true,
+        deleted: false
+    },
+    {
+        id: '6',
+        from: 'my@mail.com',
+        to: 'lipa@yahoo.com',
+        date: '2019-07-14T06:46:23.162Z',
+        subject: 'Payment accepted',
+        content: '<div>Thank you for your payment, it has been succeeded!</div>',
+        category: 'SENT',
+        isRead: true,
+        deleted: false
+    },
+    {
+        id: '7',
+        from: 'rozetka.com',
+        to: 'my@mail.com',
+        date: '2019-08-04T06:46:23.162Z',
+        subject: 'Products based on your interests',
+        content: '<div>Take a look at this fridge!</div>',
+        category: 'ARCHIVED',
+        isRead: true,
+        deleted: false
+    },
+    {
+        id: '8',
+        from: 'evil.spammer@evil.com',
+        to: 'my@mail.com',
+        date: '2019-07-29T06:46:23.162Z',
+        subject: 'SALES SALES SALES',
+        content: '<div>Greatest discounts ever in the greatest ever shop!!!</div>',
+        category: 'SPAM',
+        isRead: true,
+        deleted: false
+    },
+    {
+        id: '9',
+        from: 'mom@gmail.com',
+        to: 'my@mail.com',
+        date: '2019-09-29T06:46:23.162Z',
+        subject: 'Have you worn a cap?',
+        content: '<div>Answer immediately!!!</div>',
+        category: 'INBOX',
+        isRead: true,
+        deleted: false
+    }
+];
+
+export default stubLetters;

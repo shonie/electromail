@@ -5,12 +5,13 @@ import {
     lettersReceived
 } from './../actions/lettersActions';
 import { Letter } from '../types';
+import stubLetters from '../stubs/stubLetters';
 
 function* fetchLetters(_: LettersRequestedAction) {
-    const response: Letter[] = [];
-
+    const response: Letter[] = stubLetters;
     yield put(lettersReceived(response));
 }
+
 export default function* mailboxSaga() {
-    takeLatest(LETTERS_REQUESTED, fetchLetters);
+    yield takeLatest(LETTERS_REQUESTED, fetchLetters);
 }
