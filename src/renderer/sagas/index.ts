@@ -1,8 +1,10 @@
 import { fork } from 'redux-saga/effects';
-import mailbox from './mailbox';
+import mailboxIpcSaga from './mailboxIpcSaga';
+import saveLetterSaga from './saveLetter';
 import logger from './logger';
 
 export default function* rootSaga() {
-    yield fork(mailbox);
+    yield fork(mailboxIpcSaga);
     yield fork(logger);
+    yield fork(saveLetterSaga);
 }

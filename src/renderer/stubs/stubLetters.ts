@@ -1,4 +1,4 @@
-import { Letter } from '../types';
+import { Letter } from '../../types';
 
 const stubLetters: Letter[] = [
     {

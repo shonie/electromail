@@ -6,8 +6,14 @@ import * as theme from './Letter.scss';
 import * as deleteIcon from './icons/delete.svg';
 import * as readIcon from './icons/read.svg';
 import * as unreadIcon from './icons/unread.svg';
+import * as saveIcon from './icons/save.svg';
 
-export default function Letter({ letter, updateLetter, deleteLetter }: LetterProps) {
+export default function Letter({
+    letter,
+    updateLetter,
+    deleteLetter,
+    saveLetterToDisk
+}: LetterProps) {
     const ref: React.RefObject<HTMLParagraphElement> = React.useRef(null);
 
     React.useEffect(() => {
@@ -30,6 +36,11 @@ export default function Letter({ letter, updateLetter, deleteLetter }: LetterPro
                             title: 'Delete',
                             icon: deleteIcon,
                             execute: () => deleteLetter(letter.id)
+                        },
+                        {
+                            title: 'Save to Disk',
+                            icon: saveIcon,
+                            execute: () => saveLetterToDisk(letter)
                         }
                     ]}
                 />

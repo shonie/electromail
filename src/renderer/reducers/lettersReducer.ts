@@ -1,4 +1,3 @@
-import { DELETED } from './../constants/letterCategories';
 import { createReducer } from 'redux-create-reducer';
 import keyBy from 'lodash.keyby';
 import mapValues from 'lodash.mapvalues';
@@ -17,8 +16,8 @@ import {
     UpdateLetterAction,
     DeleteLetterAction
 } from '../actions/lettersActions';
-import { Letter, HashMap } from '../types';
-import * as categories from '../constants/letterCategories';
+import { Letter, HashMap } from '../../types';
+import * as categories from '../../constants/letterCategories';
 
 export interface LettersState {
     readonly list: Letter[];

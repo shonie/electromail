@@ -1,6 +1,9 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, ipcMain, dialog, IpcMessageEvent } from 'electron';
+import fs from 'fs';
 import * as path from 'path';
 import * as url from 'url';
+import { Letter } from '../types';
+import letterTemplate from './letterTemplate';
 
 let win: BrowserWindow | null;
 
@@ -60,8 +63,21 @@ app.on('activate', () => {
     }
 });
 
-ipcMain.on('LETTERS_REQUESTED', (event: any) => {
+ipcMain.on('LETTERS_REQUESTED', (event: IpcMessageEvent) => {
     const stubLetters = require('./stubLetters.json');
 
     event.sender.send('LETTERS_RECEIVED', stubLetters);
+});
+
+ipcMain.on('SAVE_LETTER_TO_DISK', async (event: IpcMessageEvent, letter: Letter) => {
+    const path = dialog.showSaveDialog(win as BrowserWindow, {
+        title: 'Save letter',
+        defaultPath: `${app.getPath('documents')}/${letter.subject}.txt`
+    });
+
+    if (path) {
+        await fs.promises.writeFile(path, letterTemplate(letter), { encoding: 'utf8' });
+
+        event.sender.send('LETTER_SAVED_TO_DISK');
+    }
 });

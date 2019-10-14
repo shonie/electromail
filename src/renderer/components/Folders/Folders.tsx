@@ -2,8 +2,8 @@ import React from 'react';
 import { FoldersProps } from './types';
 import { Folder as FolderComponent } from './Folder';
 import * as theme from './Folders.scss';
-import { Folder } from '../../types';
-import * as categories from '../../constants/letterCategories';
+import { Folder } from '../../../types';
+import * as categories from '../../../constants/letterCategories';
 
 const folders: Folder[] = [
     {

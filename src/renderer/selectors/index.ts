@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { Letter } from '../types';
+import { Letter } from '../../types';
 import { RootState } from '../reducers';
 
 export const getLetters = (state: RootState) => state.letters.list;

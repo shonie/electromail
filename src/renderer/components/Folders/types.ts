@@ -1,4 +1,4 @@
-import { Folder } from '../../types';
+import { Folder } from '../../../types';
 
 export interface FolderProps {
     folder: Folder;

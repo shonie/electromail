@@ -1,6 +1,6 @@
 import { createReducer } from 'redux-create-reducer';
 import { FOLDER_SELECTED, FoldersActions, FolderSelectedAction } from '../actions/foldersActions';
-import { INBOX } from '../constants/letterCategories';
+import { INBOX } from '../../constants/letterCategories';
 
 export interface FoldersState {
     readonly current: string;

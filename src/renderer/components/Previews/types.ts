@@ -1,4 +1,4 @@
-import { Letter } from '../../types';
+import { Letter } from '../../../types';
 
 export interface PreviewProps {
     letter: Letter;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { PreviewsProps } from './types';
-import { Letter } from '../../types';
+import { Letter } from '../../../types';
 import { Preview } from './Preview';
 import * as theme from './Previews.scss';
 
