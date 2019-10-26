@@ -57,7 +57,7 @@
     "appId": "electromail",
     "mac": {
       "category": "productivity",
-      "target":"pkg"
+      "target": "pkg"
     },
     "directories": {
       "output": "release"
